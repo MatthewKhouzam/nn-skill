@@ -1,0 +1,19 @@
+{
+  "plugins": [
+    {
+      "name": "new-and-noteworthy",
+      "version": "1.0.0",
+      "description": "Generates \"New and Noteworthy\" summaries for project updates. Use when you need to summarize recent changes, update NEW_AND_NOTEWORTHY.md, or explain what has changed between two git references (branches, tags, or commits).",
+      "author": "Matthew Khouzam",
+      "license": "MIT",
+      "path": ".",
+      "repository": "https://github.com/MatthewKhouzam/nn-skill",
+      "tags": [
+        "git",
+        "changelog",
+        "summary",
+        "release-notes"
+      ]
+    }
+  ]
+}
