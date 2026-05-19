@@ -1,0 +1,6 @@
+interface:
+  display_name: New and Noteworthy
+  short_description: Generates professional, categorized summaries of git changes.
+  brand_color: "#4A90E2"
+policy:
+  allow_implicit_invocation: true
