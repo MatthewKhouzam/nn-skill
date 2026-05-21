@@ -1,23 +1,38 @@
 # New and Noteworthy Skill (nn-skill)
 
-This repository contains the `new-and-noteworthy` skill for Gemini CLI. It helps generate professional, categorized summaries of recent changes in a codebase by analyzing git logs and diffs.
+This repository contains the `new-and-noteworthy` skill/plugin for various coding assistants. It helps generate professional, categorized summaries of recent changes in a codebase by analyzing git logs and diffs.
+
+## Coding Assistant Instructions
+
+This project includes specific configurations and instructions for different assistants:
+
+- **Gemini CLI:** [`SKILL.md`](SKILL.md) and [`gemini-cli-extension.json`](gemini-cli-extension.json)
+- **Claude Desktop:** [`.claude-plugin/plugin.json`](.claude-plugin/plugin.json)
+- **OpenAI Agents:** [`agents/openai.yaml`](agents/openai.yaml)
 
 ## Features
 
-- **Automated Data Gathering:** Quickly extract commit messages and diff stats.
-- **Categorized Reporting:** Guidance on how to group changes into meaningful sections.
-- **Template-Based:** Use a consistent format for all your release notes and updates.
+- **Automated Data Gathering:** Quickly extract commit messages and diff stats using git.
+- **Categorized Reporting:** Structured guidance for grouping changes into Major Features, Technical Changes, Infrastructure, etc.
+- **Template-Based:** Uses a [consistent format](references/template.md) for all release notes and updates.
 
 ## Getting Started
 
 ### Prerequisites
 
-- [Gemini CLI](https://github.com/google/gemini-cli)
 - Git
+- A supported coding assistant (Gemini CLI, Claude Desktop, or an OpenAI-compatible agent)
 
 ### Installation
 
-To use this as a skill in Gemini CLI, you can point your configuration to this directory or copy the files to your `~/.gemini/skills/` folder.
+#### Gemini CLI
+Point your configuration to this directory or copy the files to your `~/.gemini/skills/` folder.
+
+#### Claude Desktop
+Add this directory to your Claude configuration as a plugin.
+
+#### OpenAI
+Reference the `agents/openai.yaml` configuration in your agent setup.
 
 ## Usage
 
