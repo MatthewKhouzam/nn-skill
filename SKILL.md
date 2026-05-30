@@ -1,11 +1,34 @@
 ---
 name: new-and-noteworthy
-description: Generates "New and Noteworthy" summaries for project updates. Use when you need to summarize recent changes, update NEW_AND_NOTEWORTHY.md, or explain what has changed between two git references (branches, tags, or commits).
+description: "Generates 'New and Noteworthy' summaries for project updates. Use when you need to summarize recent changes, update NEW_AND_NOTEWORTHY.md, or explain what has changed between two git references (branches, tags, or commits)."
+license: MIT
+compatibility: Requires git CLI installed and available on PATH
+runtimes:
+  - kiro
+  - claude-code
+  - opencode
+  - gemini
+metadata:
+  short_description: "Summarizes git changes into categorized release notes"
+  version: "0.1.0"
+  authors: ["Matthew Khouzam <matthew.khouzam@gmail.com>"]
+  roles:
+    - developer
 ---
 
 # New and Noteworthy
 
-This skill helps Gemini CLI generate professional, categorized summaries of recent changes in the codebase by analyzing git logs and diffs.
+This skill helps generate professional, categorized summaries of recent changes in the codebase by analyzing git logs and diffs.
+
+## Preflight
+
+Before proceeding, verify that `git` is available:
+
+```bash
+git --version
+```
+
+If the command fails, inform the user that git is required and stop.
 
 ## Workflow
 
@@ -22,7 +45,7 @@ Use the bundled script to gather commit messages and diff summaries.
 
 Example:
 ```bash
-./new-and-noteworthy/scripts/gather_changes.sh master
+./scripts/gather_changes.sh master
 ```
 
 ### 2. Analyze Changes
