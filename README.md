@@ -41,12 +41,12 @@ Reference the `agents/openai.yaml` configuration in your agent setup.
 Identify the range of changes (e.g., `main..HEAD`). Run the gathering script:
 
 ```bash
-./scripts/gather_changes.sh <base-ref> [head-ref]
+uvx scripts/gather_changes.py <base-ref> [head-ref]
 ```
 
 Example:
 ```bash
-./scripts/gather_changes.sh main
+uvx scripts/gather_changes.py main
 ```
 
 ### 2. Analyze and Report

@@ -17,12 +17,12 @@ Identify the range of changes. Usually this is `master..HEAD` or between two tag
 Use the bundled script to gather commit messages and diff summaries.
 
 ```bash
-./scripts/gather_changes.sh <base-ref> [head-ref]
+uvx scripts/gather_changes.py <base-ref> [head-ref]
 ```
 
 Example:
 ```bash
-./new-and-noteworthy/scripts/gather_changes.sh master
+uvx ./new-and-noteworthy/scripts/gather_changes.py master
 ```
 
 ### 2. Analyze Changes
@@ -47,7 +47,7 @@ Use the [template.md](references/template.md) as a guide to format the final out
 ## Examples
 
 **User:** "What's new in the current branch compared to master?"
-**Action:** Run `gather_changes.sh master`, analyze, and provide a categorized summary.
+**Action:** Run `uvx gather_changes.py master`, analyze, and provide a categorized summary.
 
 **User:** "Update NEW_AND_NOTEWORTHY.md for the recent release."
-**Action:** Run `gather_changes.sh <last-release-tag>`, generate the report, and write it to the file.
+**Action:** Run `uvx gather_changes.py <last-release-tag>`, generate the report, and write it to the file.
